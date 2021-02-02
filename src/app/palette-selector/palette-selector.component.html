@@ -1,1 +1,20 @@
-<p>palette-selector works!</p>
+<h3>Palette selector</h3>
+
+<div class="palette-wrapper">
+  <div class="row row-0">
+    <div class="col" [style.backgroundColor]="paletteForm.get('primary').value">
+      Primary
+      <input [formControl]="paletteForm.get('primary')"/>
+    </div>
+    <div class="col" [style.backgroundColor]="paletteForm.get('secondary').value">
+      Secondary
+      <input [formControl]="paletteForm.get('secondary')"/>
+    </div>
+    <div class="col" [style.backgroundColor]="paletteForm.get('error').value">
+      Error
+      <input [formControl]="paletteForm.get('error')"/>
+    </div>
+  </div>
+
+  <button mat-stroked-button (click)="applyTheme()">Apply</button>
+</div>
