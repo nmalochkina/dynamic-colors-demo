@@ -1,3 +1,8 @@
+// Кастомная тема приложения 
+// Все создано по доке AngularMaterial https://material.angular.io/guide/theming#defining-a-custom-theme
+// но используем не встроенные палитры цветов, а кастомные с css-variables
+
+
 @import '~@angular/material/theming';
 @import 'variables';
 // Plus imports for other components in your app.
@@ -7,7 +12,113 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$primary-palette: (
+  50: var(--primary50),
+  100: var(--primary100),
+  200: var(--primary200),
+  300: var(--primary300),
+  400: var(--primary400),
+  500: var(--primary500),
+  600: var(--primary600),
+  700:var(--primary700),
+  800: var(--primary800),
+  900: var(--primary900),
+  A100: var(--primaryA100),
+  A200: var(--primaryA200),
+  A400: var(--primaryA400),
+  A700: var(--primaryA700),
+  contrast: (
+    50: var(--onprimary),
+    100: var(--onprimary),
+    200: var(--onprimary),
+    300: var(--onprimary),
+    400: var(--onprimary),
+    500: var(--onprimary),
+    600: var(--onprimary),
+    700: var(--onprimary),
+    800: var(--onprimary),
+    900: var(--onprimary),
+    A100: var(--onprimary),
+    A200: var(--onprimary),
+    A400: var(--onprimary),
+    A700: var(--onprimary),
+  )
+);
 
+$accent-palette: (
+  50: var(--secondary50),
+  100: var(--secondary100),
+  200: var(--secondary200),
+  300: var(--secondary300),
+  400: var(--secondary400),
+  500: var(--secondary500),
+  600: var(--secondary600),
+  700:var(--secondary700),
+  800: var(--secondary800),
+  900: var(--secondary900),
+  A100: var(--secondaryA100),
+  A200: var(--secondaryA200),
+  A400: var(--secondaryA400),
+  A700: var(--secondaryA700),
+  contrast: (
+    50: var(--onsecondary),
+    100: var(--onsecondary),
+    200: var(--onsecondary),
+    300: var(--onsecondary),
+    400: var(--onsecondary),
+    500: var(--onsecondary),
+    600: var(--onsecondary),
+    700: var(--onsecondary),
+    800: var(--onsecondary),
+    900: var(--onsecondary),
+    A100: var(--onsecondary),
+    A200: var(--onsecondary),
+    A400: var(--onsecondary),
+    A700: var(--onsecondary),
+  )
+);
+
+$warning-palette: (
+  50: var(--error50),
+  100: var(--error100),
+  200: var(--error200),
+  300: var(--error300),
+  400: var(--error400),
+  500: var(--error500),
+  600: var(--error600),
+  700: var(--error700),
+  800: var(--error800),
+  900: var(--error900),
+  A100: var(--errorA100),
+  A200: var(--errorA200),
+  A400: var(--errorA400),
+  A700: var(--errorA700),
+  contrast: (
+    50: var(--onerror),
+    100: var(--onerror),
+    200: var(--onerror),
+    300: var(--onerror),
+    400: var(--onerror),
+    500: var(--onerror),
+    600: var(--onerror),
+    700: var(--onerror),
+    800: var(--onerror),
+    900: var(--onerror),
+    A100: var(--onerror),
+    A200: var(--onerror),
+    A400: var(--onerror),
+    A700: var(--onerror),
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$primary: mat-palette($primary-palette);
+$accent:  mat-palette($accent-palette);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($warning-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.

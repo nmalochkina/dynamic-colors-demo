@@ -1,117 +1,56 @@
-
-$dark-primary-text: rgba(red, 0.87);
-$light-primary-text: white;
+// дефолтная цветовая схема приложения
 
 :root {
-  --primary: #009688;
-  --secondary: #673ab7;
-  --error: #f44336;
+  --background: #fff;
+
+  --onprimary: #fff;
+  --onsecondary: #000;
+  --onerror: #fff;
+
+  --primary50: #e8eaf6;
+  --primary100: #c5cae9;
+  --primary200: #9fa8da;
+  --primary300: #7986cb;
+  --primary400: #5c6bc0;
+  --primary500: #3f51b5;
+  --primary600: #3949ab;
+  --primary700: #303f9f;
+  --primary800: #283593;
+  --primary900: #1a237e;
+  --primaryA100: #8c9eff;
+  --primaryA200: #536dfe;
+  --primaryA400: #3d5afe;
+  --primaryA700: #304ffe;
+
+  --secondary50: #e0f2f1;
+  --secondary100: #b2dfdb;
+  --secondary200: #80cbc4;
+  --secondary300: #4db6ac;
+  --secondary400: #26a69a;
+  --secondary500: #009688;
+  --secondary600: #00897b;
+  --secondary700: #00796b;
+  --secondary800: #00695c;
+  --secondary900: #004d40;
+  --secondaryA100: #a7ffeb;
+  --secondaryA200: #64ffda;
+  --secondaryA400: #1de9b6;
+  --secondaryA700: #00bfa5;
+
+  --error50: #ffebee;
+  --error100: #ffcdd2;
+  --error200: #ef9a9a;
+  --error300: #e57373;
+  --error400: #ef5350;
+  --error500: #f44336;
+  --error600: #e53935;
+  --error700: #d32f2f;
+  --error800: #c62828;
+  --error900: #b71c1c;
+  --errorA100: #ff8a80;
+  --errorA200: #ff5252;
+  --errorA400: #ff1744;
+  --errorA700: #d50000;
 }
 
-$custom-teal: (
-  50: #e0f2f1,
-  100: #b2dfdb,
-  200: #80cbc4,
-  300: #4db6ac,
-  400: #26a69a,
-  500: var(--primary), // #009688,
-  600: #00897b,
-  700: #00796b,
-  800: #00695c,
-  900: #004d40,
-  A100: #a7ffeb,
-  A200: #64ffda,
-  A400: #1de9b6,
-  A700: #00bfa5,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $dark-primary-text,
-  )
-);
 
-$custom-deep-purple: (
-  50: #ede7f6,
-  100: #d1c4e9,
-  200: #b39ddb,
-  300: #9575cd,
-  400: #7e57c2,
-  500: var(--secondary),// #673ab7,
-  600: #5e35b1,
-  700: #512da8,
-  800: #4527a0,
-  900: #311b92,
-  A100: #b388ff,
-  A200: #7c4dff,
-  A400: #651fff,
-  A700: #6200ea,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $light-primary-text,
-    400: $light-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $light-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
-  )
-);
-
-$custom-red: (
-  50: #ffebee,
-  100: #ffcdd2,
-  200: #ef9a9a,
-  300: #e57373,
-  400: #ef5350,
-  500: var(--error), //#f44336,
-  600: #e53935,
-  700: #d32f2f,
-  800: #c62828,
-  900: #b71c1c,
-  A100: #ff8a80,
-  A200: #ff5252,
-  A400: #ff1744,
-  A700: #d50000,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $light-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
-  )
-);
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$primary: mat-palette($custom-teal);
-$accent:  mat-palette($custom-deep-purple);
-
-// The warn palette is optional (defaults to red).
-$warn:    mat-palette($custom-red);

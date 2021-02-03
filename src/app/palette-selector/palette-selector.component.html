@@ -2,19 +2,47 @@
 
 <div class="palette-wrapper">
   <div class="row row-0">
-    <div class="col" [style.backgroundColor]="paletteForm.get('primary').value">
-      Primary
-      <input [formControl]="paletteForm.get('primary')"/>
+    <div class="col" [style.backgroundColor]="getColor('primary')">
+      Primary <input [formControl]="getControl('primary')"/>
     </div>
-    <div class="col" [style.backgroundColor]="paletteForm.get('secondary').value">
-      Secondary
-      <input [formControl]="paletteForm.get('secondary')"/>
+    <div class="col"></div>
+    <div class="col" [style.backgroundColor]="getColor('secondary')">
+      Secondary <input [formControl]="getControl('secondary')"/>
     </div>
-    <div class="col" [style.backgroundColor]="paletteForm.get('error').value">
+    <div class="col">TODO</div>
+  </div>
+
+  <div class="row row-1">
+    <div class="col" [style.backgroundColor]="getColor('background')">
+      Background
+      <input [formControl]="getControl('background')"/>
+    </div>
+    <div class="col">TODO</div>
+    <div class="col" [style.backgroundColor]="getColor('error')">
       Error
-      <input [formControl]="paletteForm.get('error')"/>
+      <input [formControl]="getControl('error')"/>
     </div>
   </div>
 
-  <button mat-stroked-button (click)="applyTheme()">Apply</button>
+  <div class="row row-2">
+    <div class="col" [style.backgroundColor]="getColor('onprimary')">
+      On Primary
+      <input [formControl]="getControl('onprimary')"/>
+    </div>
+    <div class="col" [style.backgroundColor]="getColor('onsecondary')">
+      On Secondary
+      <input [formControl]="getControl('onsecondary')"/>
+    </div>
+  </div>
+
+  <div class="row row-3">
+    <div class="col">TODO</div>
+    <div class="col">TODO</div>
+    <div class="col" [style.backgroundColor]="getColor('onerror')">
+      On Error
+      <input [formControl]="getControl('onerror')"/>
+    </div>
+  </div>
+
+  <button mat-raised-button (click)="applyTheme()" [style.marginTop]="'30px'">APPLY</button>
 </div>

@@ -1,5 +1,18 @@
-export class Palette {
-  primary: string = getComputedStyle(document.documentElement).getPropertyValue('--primary');
-  secondary: string = getComputedStyle(document.documentElement).getPropertyValue('--secondary');
-  error: string = getComputedStyle(document.documentElement).getPropertyValue('--error');
+const getCssVariable = (key: string) => getComputedStyle(document.documentElement).getPropertyValue(key);
+
+/**
+ * Получаем цветовую схему приложения из css-variables
+ */
+export class AppColorSheme {
+  primary = getCssVariable('--primary500');
+  secondary = getCssVariable('--secondary500');
+
+  background = getCssVariable('--background');
+  error = getCssVariable('--error500');
+
+  onprimary = getCssVariable('--onprimary');
+  onsecondary = getCssVariable('--onsecondary');
+
+  onerror = getCssVariable('--onerror');
+  
 }
